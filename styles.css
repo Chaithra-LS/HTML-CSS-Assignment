@@ -19,16 +19,12 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
-    gap: 15px;
 }
 
 .nav-links {
     display: flex;
     gap: 80px;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .nav-link {
@@ -37,7 +33,6 @@ body {
     font-weight: 500;
     font-size: 24px;
     transition: color 0.3s ease;
-    white-space: nowrap;
 }
 
 
@@ -140,14 +135,6 @@ body {
         padding: 15px 100px;
     }
 
-    .nav-links {
-        gap: 40px;
-    }
-
-    .nav-link {
-        font-size: 20px;
-    }
-
     .hero {
         padding: 0 0 0 20px;
     }
@@ -164,7 +151,7 @@ body {
     }
 
     .nav-links {
-        gap: 20px;
+        gap: 25px;
     }
 
     .nav-link {
@@ -190,10 +177,6 @@ body {
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 30px;
-    }
-
-    .nav-links {
-        display: none;
     }
 
     .hero {
@@ -241,8 +224,12 @@ body {
         padding: 12px 20px;
     }
 
+    .nav-links {
+        gap: 15px;
+    }
+
     .nav-link {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .text-content {

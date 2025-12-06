@@ -14,11 +14,13 @@ body {
 
 .navbar {
     background-color: #FF7B7B;
-    padding: 15px 220px;
+    padding: 15px 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-links {
@@ -35,6 +37,10 @@ body {
     transition: color 0.3s ease;
 }
 
+
+.menu-toggle {
+    display: none;
+}
 
 .hamburger-menu {
     display: flex;
@@ -177,6 +183,43 @@ body {
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 30px;
+        position: relative;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #FF7B7B;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-toggle:checked~.nav-links {
+        max-height: 400px;
+        padding: 20px 0;
+    }
+
+    .nav-link {
+        padding: 15px 0;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
     }
 
     .hero {
@@ -224,12 +267,9 @@ body {
         padding: 12px 20px;
     }
 
-    .nav-links {
-        gap: 15px;
-    }
-
     .nav-link {
-        font-size: 12px;
+        font-size: 16px;
+        padding: 12px 20px;
     }
 
     .text-content {
